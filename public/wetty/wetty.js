@@ -10,8 +10,7 @@ function Wetty(argv) {
 
 Wetty.prototype.run = function() {
     this.io = this.argv_.io.push();
-
-    this.io.onVTKeystroke = this.sendString_.bind(this);
+		this.io.onVTKeystroke = this.sendString_.bind(this);
     this.io.sendString = this.sendString_.bind(this);
     this.io.onTerminalResize = this.onTerminalResize.bind(this);
 }
